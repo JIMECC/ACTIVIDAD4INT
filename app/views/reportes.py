@@ -5,8 +5,7 @@ from app.models.categoria import Categoria
 from app.models.ingrediente import Ingrediente
 from app.models.receta_ingrediente import RecetaIngrediente
 from app.models.receta import Receta
-class ReporteSimpleView(BaseView):
-    
+class ReporteSimpleView(BaseView):    
     @expose("/", methods =["GET", "POST"])
     def list(self):
         categorias = db.session.query(Categoria).all()
